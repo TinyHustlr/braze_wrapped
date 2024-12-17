@@ -77,7 +77,7 @@ dialog::backdrop {
 .text-overlay {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Text font */
     font-weight: 700;
-    color: white; /* Text color */
+    color: #ffffff; /* Text color */
     text-align: center;
     font-size: 1.5em;
     padding: 10%;
@@ -98,23 +98,24 @@ dialog::backdrop {
             Your browser does not support the audio element.
         </audio>    
         <div class="siema">
+            <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
             <div class="siema-container">
-                <p class="text-overlay">You created {{custom_attribute.${projects}}} projects this year.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay">You created {{custom_attribute.${projects}}} projects this year.</p> 
             </div>
             <div class="siema-container">
-                <p class="text-overlay">That puts you in the top 30% of all creators.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay">That puts you in the top 30% of all creators.</p> 
             </div>
             <div class="siema-container">
-                <p class="text-overlay">Not only did you create but you exported {{custom_attribute.${exports}}} videos.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay">Not only did you create but you exported {{custom_attribute.${exports}}} videos.</p> 
             </div>
             <div class="siema-container">
-                <p class="text-overlay">You really love to share your work!</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay">You really love to share your work!</p> 
             </div>
             <div class="siema-container">
-                <p class="text-overlay">We've crunched all the numbers and your editing rank for 2024 is...</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay">We've crunched all the numbers and your editing rank for 2024 is...</p> 
             </div>
             <div class="siema-container">
-                <p class="text-overlay text-rank">{{custom_attribute.${plan}}}.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+                <p class="text-overlay text-rank">{{custom_attribute.${plan}}}.</p> 
             </div>
         </div>
     </dialog>

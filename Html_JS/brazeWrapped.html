@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braze Wrapped</title>
+</head>
+<style>
+body {
+    margin: 0;
+}
+
+dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 400px;
+    max-height: 600px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gradient-animation {
+    background: linear-gradient(45deg, #F72585, #7209B7, #4CC9f0); /* Gradient angle, and three colours. Can be changed to match brand. */
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite; /* Animation speed timing, easing, and repeats */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.2); /* Background color behind modal */
+}
+
+.cross-close {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    border: 0;
+    right: 10px;
+    top: 10px;
+    background: none;
+    z-index: 1;
+}
+
+.siema-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%; 
+    max-width: 400px; 
+    height: auto; 
+    margin: 0 auto;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Text font */
+    font-weight: 700;
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.text-rank {
+    font-size: 3.5em; /* Larger text size on last page of carousel */
+}
+
+</style>
+<body>
+    <dialog id="wrapped-dialog" class="dialog gradient-animation">
+        <button id="close-btn" class="cross-close">X</button>
+        <audio autoplay mute>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg"> <!-- Source of the music file -->
+            Your browser does not support the audio element.
+        </audio>    
+        <div class="siema">
+            <div class="siema-container">
+                <p class="text-overlay">You created {{custom_attribute.${projects}}} projects this year.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+            <div class="siema-container">
+                <p class="text-overlay">That puts you in the top 30% of all creators.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+            <div class="siema-container">
+                <p class="text-overlay">Not only did you create but you exported {{custom_attribute.${exports}}} videos.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+            <div class="siema-container">
+                <p class="text-overlay">You really love to share your work!</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+            <div class="siema-container">
+                <p class="text-overlay">We've crunched all the numbers and your editing rank for 2024 is...</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+            <div class="siema-container">
+                <p class="text-overlay text-rank">{{custom_attribute.${plan}}}.</p> <!-- Change text and custom attributes to match your needs. Images can be added using <img /> -->
+            </div>
+        </div>
+    </dialog>
+</body>
+<!-- Source of Siema code - DO NOT CHANGE or carousel will break -->
+<script src="https://appboy-images.com/appboy/communication/assets/code_assets/files/5f2d589683566823fc373ec4/original.js?1596807318"></script> 
+
+<!-- Link to JS file in Braze here -->
+<script src=""></script>
+</html>

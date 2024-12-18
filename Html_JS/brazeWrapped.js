@@ -11,7 +11,7 @@ const mySiema = new Siema({
 });
 
 // listen for keydown event
-setInterval(() => mySiema.next(), 6000)|            
+setInterval(() => mySiema.next(), 6000)         
 
 // close modal function
 closeButton.addEventListener("click", ()=> {
